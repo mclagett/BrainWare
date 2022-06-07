@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brainware.Tests", "Brainware.Tests\Brainware.Tests.csproj", "{36D1B862-5DAA-45C0-99D6-D757F42C30F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNetCoreWeb", "ASPNETCoreWeb\ASPNetCoreWeb.csproj", "{288EF12E-34E4-42D0-949C-AA3DACB24B0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPNetCoreWeb", "ASPNetCoreWeb\ASPNetCoreWeb.csproj", "{0729A633-FD47-4263-A37E-93E6DB1DF06E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +30,10 @@ Global
 		{36D1B862-5DAA-45C0-99D6-D757F42C30F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36D1B862-5DAA-45C0-99D6-D757F42C30F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36D1B862-5DAA-45C0-99D6-D757F42C30F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{288EF12E-34E4-42D0-949C-AA3DACB24B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{288EF12E-34E4-42D0-949C-AA3DACB24B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{288EF12E-34E4-42D0-949C-AA3DACB24B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{288EF12E-34E4-42D0-949C-AA3DACB24B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0729A633-FD47-4263-A37E-93E6DB1DF06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0729A633-FD47-4263-A37E-93E6DB1DF06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0729A633-FD47-4263-A37E-93E6DB1DF06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0729A633-FD47-4263-A37E-93E6DB1DF06E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

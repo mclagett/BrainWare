@@ -10,6 +10,8 @@ namespace ASPNetCoreWeb.Controllers
     using Infrastructure;
     using Models;
 
+    [ApiController]
+    [Route("[controller]")]
     public class OrderController : ControllerBase
     {
         [HttpGet]
