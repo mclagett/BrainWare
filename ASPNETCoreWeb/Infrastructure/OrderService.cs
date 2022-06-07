@@ -135,7 +135,7 @@ namespace ASPNetCoreWeb.Infrastructure
                 .GroupBy(qr => (qr.CompanyId, qr.OrderId))
                 .Select(qrg => new Order()
                 {
-                    OrderId = qrg.Key.Item1,
+                    OrderId = qrg.Key.Item2,
                     CompanyName = qrg.First().CompanyName,
                     Description = qrg.First().OrderDescription,
                     OrderTotal = qrg.Sum(qr => qr.OrderItemPrice * qr.OrderItemQuantity),
