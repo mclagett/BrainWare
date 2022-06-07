@@ -4,6 +4,7 @@ using ASPNetCoreWeb.Infrastructure;
 using ASPNetCoreWeb.Controllers;
 using System.Linq;
 using System.Collections;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Brainware.Tests
 {
@@ -51,7 +52,12 @@ namespace Brainware.Tests
         public void OrdersControllerReturnsCorrectContents()
         {
             // Arrange
-            var sut = new OrderController();
+            var services = new ServiceCollection();
+            services.AddTransient<IOrderService, OrderService>();
+            var serviceProvider = services.BuildServiceProvider();
+            var orderService = serviceProvider.GetService<IOrderService>();
+
+            var sut = new OrderController(orderService);
             var companyId = 1;
 
             // Act

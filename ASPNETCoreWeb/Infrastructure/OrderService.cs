@@ -8,7 +8,12 @@ namespace ASPNetCoreWeb.Infrastructure
     using System.Data;
     using Models;
 
-    public class OrderService
+    public interface IOrderService
+    {
+        List<Order> GetOrdersForCompany(int requestedCompanyId);
+    }
+
+    public class OrderService : IOrderService
     {
         //public List<Order> GetOrdersForCompany(int CompanyId)
         //{

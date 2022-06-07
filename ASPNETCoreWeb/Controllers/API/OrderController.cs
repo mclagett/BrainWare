@@ -14,12 +14,17 @@ namespace ASPNetCoreWeb.Controllers
     [Route("[controller]")]
     public class OrderController : ControllerBase
     {
+        IOrderService _orderService = null;
+        
+        public OrderController([FromServices] IOrderService orderService)
+        {
+            _orderService = orderService;
+        }
+
         [HttpGet]
         public IEnumerable<Order> GetOrders(int id = 1)
         {
-            var data = new OrderService();
-
-            return data.GetOrdersForCompany(id);
+            return _orderService.GetOrdersForCompany(id);
         }
     }
 }
