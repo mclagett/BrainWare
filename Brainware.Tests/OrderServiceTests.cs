@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using Web.Infrastructure;
+using ASPNetCoreWeb.Infrastructure;
 
 namespace Brainware.Tests
 {

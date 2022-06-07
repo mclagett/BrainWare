@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Web\Web.csproj" />
+    <ProjectReference Include="..\ASPNETCoreWeb\ASPNetCoreWeb.csproj" />
   </ItemGroup>
 
 </Project>

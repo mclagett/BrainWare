@@ -92,12 +92,6 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Web\Web.csproj">
-      <Project>{F188788A-1ECA-4614-B085-C6F57D2990AA}</Project>
-      <Name>Web</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
