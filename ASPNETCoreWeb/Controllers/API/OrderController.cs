@@ -14,11 +14,13 @@ namespace ASPNetCoreWeb.Controllers
     [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
-        IOrderService _orderService = null;
-        
-        public OrderController([FromServices] IOrderService orderService)
+        private readonly IOrderService _orderService = null;
+        private readonly ILogger<OrderController> _logger;
+
+        public OrderController([FromServices] IOrderService orderService, ILogger<OrderController> logger)
         {
             _orderService = orderService;
+            _logger = logger;
         }
 
         [HttpGet("{id}")]

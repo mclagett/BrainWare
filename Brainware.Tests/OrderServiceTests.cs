@@ -5,6 +5,8 @@ using ASPNetCoreWeb.Controllers;
 using System.Linq;
 using System.Collections;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Moq;
 
 namespace Brainware.Tests
 {
@@ -52,12 +54,14 @@ namespace Brainware.Tests
         public void OrdersControllerReturnsCorrectContents()
         {
             // Arrange
+            Mock<ILogger<OrderController>> mockLogger = new Mock<ILogger<OrderController>>();
+
             var services = new ServiceCollection();
             services.AddTransient<IOrderService, OrderService>();
             var serviceProvider = services.BuildServiceProvider();
             var orderService = serviceProvider.GetService<IOrderService>();
 
-            var sut = new OrderController(orderService);
+            var sut = new OrderController(orderService, mockLogger.Object);
             var companyId = 1;
 
             // Act
