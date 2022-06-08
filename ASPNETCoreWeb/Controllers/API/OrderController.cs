@@ -11,7 +11,7 @@ namespace ASPNetCoreWeb.Controllers
     using Models;
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
         IOrderService _orderService = null;
@@ -21,10 +21,11 @@ namespace ASPNetCoreWeb.Controllers
             _orderService = orderService;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public IEnumerable<Order> GetOrders(int id = 1)
         {
-            return _orderService.GetOrdersForCompany(id);
+            var orders = _orderService.GetOrdersForCompany(id);
+            return orders;
         }
     }
 }

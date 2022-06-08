@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Text.Json;  //for   options.JsonSerializerOptions.PropertyNamingPolicy
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,13 +26,19 @@ namespace ASPNetCoreWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+                    .AddJsonOptions(options =>
+                     {
+                         // Use the default property (Pascal) casing.
+                         options.JsonSerializerOptions.PropertyNamingPolicy = null;
+                     });
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SampleAspNetCoreWebApiToGuide", Version = "v1" });
             });
             services.AddSingleton<IOrderService, OrderService>();
+ 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
